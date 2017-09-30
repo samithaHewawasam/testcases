@@ -23,6 +23,14 @@
 - Unique entry check
 - Required
 
+### Methods in test class
+
+There are three test cases
+
+Method A : validation the form
+Method B : Add data to the form and validate it's save in the All Users table
+Method C : Check Uinque entries
+
 ####  Auther
 
 Samitha Hewawasam
