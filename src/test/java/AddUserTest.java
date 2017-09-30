@@ -210,9 +210,14 @@ public class AddUserTest {
         assertTrue((header.contains("New User")));
 
         // Check for Unique name
-        // Add user to the name input [ previously added name ]
+        // Add name to the name input [ previously added name ]
         WebElement formNameUnique = driver.findElement(By.id("name"));
         formNameUnique.sendKeys(name);
+        
+        // Check for Unique email
+        // Add email to the email input [ previously added email ]
+        WebElement formEmailUnique = driver.findElement(By.id("email"));
+        formEmailUnique.sendKeys(email);
 
         // Submit the form
         WebElement submitButtonUniqueName = driver.findElement(By.cssSelector("div.form-actions > button"));
@@ -222,7 +227,8 @@ public class AddUserTest {
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver d) {
-                return d.findElement(By.id("user.name.error")).getText().contains("Must be unique");
+                return d.findElement(By.id("user.name.error")).getText().contains("Must be unique") &&
+                       d.findElement(By.id("user.email.error")).getText().contains("Must be unique");
             }
         });
 

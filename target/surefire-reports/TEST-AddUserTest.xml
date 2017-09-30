@@ -62,7 +62,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="AddUserTest" name="A" time="5.624"/>
-  <testcase classname="AddUserTest" name="B" time="3.453"/>
-  <testcase classname="AddUserTest" name="C" time="3.396"/>
+  <testcase classname="AddUserTest" name="A" time="5.482"/>
+  <testcase classname="AddUserTest" name="B" time="3.462"/>
+  <testcase classname="AddUserTest" name="C" time="3.298"/>
 </testsuite>
